@@ -1,0 +1,60 @@
+==================================================================
+  BUILD APK BANG GITHUB - khong can Android Studio, khong dung may ban
+==================================================================
+
+Vi Windows may ban qua cu khong build duoc, ta build tren server GitHub
+(may moi, xin). Mien phi. Chi thao tac tren web, khong can biet lenh git.
+
+------------------------------------------------------------------
+BUOC 1: Tao tai khoan GitHub (neu chua co)
+------------------------------------------------------------------
+Vao github.com -> Sign up -> tao tai khoan mien phi.
+
+------------------------------------------------------------------
+BUOC 2: Tao 1 repository moi
+------------------------------------------------------------------
+- Bam dau "+" goc tren phai -> "New repository".
+- Repository name: multidisplay (dat gi cung duoc).
+- Chon Public hoac Private deu duoc.
+- Bam "Create repository".
+
+------------------------------------------------------------------
+BUOC 3: Up toan bo file trong thu muc nay len repo
+------------------------------------------------------------------
+- Trong trang repo vua tao, bam link "uploading an existing file"
+  (hoac: Add file -> Upload files).
+- Mo thu muc "multidisplay" da giai nen tren may ban.
+- KEO-THA tat ca (ca thu muc con: app, .github) vao o upload.
+  (GitHub giu nguyen cau truc thu muc khi keo tha.)
+- Keo xuong duoi -> bam "Commit changes".
+
+*** NEU KEO-THA BI THIEU thu muc .github (thu muc an) ***
+Thi tao tay file build:
+- Add file -> Create new file
+- O o ten file, go chinh xac:  .github/workflows/build.yml
+- Dan toan bo noi dung file build.yml (minh gui kem / xem trong chat).
+- Commit.
+
+------------------------------------------------------------------
+BUOC 4: Doi GitHub build (tu dong)
+------------------------------------------------------------------
+- Bam tab "Actions" o tren cung cua repo.
+- Se thay 1 lan chay ten "Build APK" dang chay (vong tron vang).
+- Doi vai phut cho no xong (dau tich xanh). Lan dau hoi lau.
+- Neu dau X do -> bam vao xem loi, chup gui lai.
+
+------------------------------------------------------------------
+BUOC 5: Tai file APK ve
+------------------------------------------------------------------
+- Bam vao lan chay da xong (tich xanh).
+- Keo xuong muc "Artifacts" -> bam "app-debug-apk" de tai ve (file .zip).
+- Giai nen -> duoc file app-debug.apk.
+- Keo app-debug.apk vao LDPlayer de cai -> mo app "MultiDisplay".
+
+------------------------------------------------------------------
+LUU Y
+------------------------------------------------------------------
+- Sua danh sach package trong file MainActivity.kt (phan CONFIG) truoc
+  khi up, cho dung so clone cua ban (c1, c2, c3, them c4 neu co).
+- Day van la CANH BAC: build xong chua chac chay (xem README.txt cu).
+  Nhung build kieu nay khong dinh Windows cu, chac chan ra duoc file APK.
